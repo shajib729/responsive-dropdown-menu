@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dropdown Menu with Search Box </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+ <div class="container">
+   <nav>
+   <input type="checkbox" id="show-menu">
+     <label for="show-menu" class="toggle"></label>
+     <div class="content">
+       <div class="logo"><a href="#">LOGO</a></div>
+       <ul class="menu">
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#" class="show-d1">featurs <span class="plus"><i class="fas fa-sort-down"></i></span></a>
+          <ul class="dropdown">
+            <li><a href="#">Dropdown 1</a></li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="show-d2">services <span class="plus"><i class="fas fa-sort-down"></i></span></a>
+          
+          <ul class="dropdown2">
+            <li><a href="#">Dropdown 1</a></li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#" class="show-d3"> More <span class="plus"><i class="fas fa-sort-down"></i></span></a>
+              <input type="checkbox">
+              <ul class="submenu">
+                <li><a href="#">Submenu 1</a></li>
+                <li><a href="#">Submenu 2</a></li>
+                <li><a href="#">Submenu 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">feedback</a></li>
+        
+       </ul>
+     </div>
+     <input type="checkbox" id="show-search">
+     <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+     <form action="">
+       <input type="search"  placeholder="Type something to search..." required>
+       <button type="submit"><i class="fas fa-long-arrow-alt-right"></i></button>
+     </form>
+   </nav>
+ </div>
+ <h1>This is a simple responsive dropdown nav menu using HTML,CSS & JACASCRIPT</h1>
+  
+
+ <script>
+   document.querySelector('.show-d1').addEventListener('click',function(){
+     document.querySelector('.show-d1').classList.toggle("active");
+     document.querySelector('.dropdown').classList.toggle("active");
+   })
+
+   document.querySelector('.show-d2').addEventListener('click',function(){
+     document.querySelector('.show-d2').classList.toggle("active");
+     document.querySelector('.dropdown2').classList.toggle("active");
+   })
+
+   document.querySelector('.show-d3').addEventListener('click',function(){
+     document.querySelector('.show-d3').classList.toggle("active");
+     document.querySelector('.submenu').classList.toggle("active");
+   })
+ </script>
+</body>
+</html>
